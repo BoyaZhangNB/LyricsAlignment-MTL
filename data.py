@@ -271,13 +271,13 @@ class LyricsAlignDataset(Dataset):
                 first_word_to_include = next(x for x, val in enumerate(list(words_start_end_pos[:, 0]))
                                              if val > start_pos/self.sr)
             except StopIteration:
-                first_word_to_include = np.Inf
+                first_word_to_include = np.inf
 
             try:
                 last_word_to_include = annot_num - 1 - next(x for x, val in enumerate(reversed(list(words_start_end_pos[:, 1])))
                                              if val < end_pos/self.sr)
             except StopIteration:
-                last_word_to_include = -np.Inf
+                last_word_to_include = -np.inf
 
             # find the notes within (start_target_pos, end_target_pos)
             note_onsets = SortedList(self.hdf_dataset[str(song_idx)]["note_times"][:, 1])

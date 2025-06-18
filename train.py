@@ -168,7 +168,7 @@ def main(args):
     state = {"step": 0,
              "worse_epochs": 0,
              "epochs": 0,
-             "best_loss": np.Inf,
+             "best_loss": np.inf,
              "best_checkpoint": None}
 
     # load a pre-trained model

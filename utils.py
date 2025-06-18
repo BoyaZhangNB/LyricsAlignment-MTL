@@ -169,7 +169,7 @@ def load_model(model, path, cuda):
         state = {"step": 0,
                  "worse_epochs": 0,
                  "epochs": checkpoint['epoch'],
-                 "best_loss": np.Inf}
+                 "best_loss": np.inf}
 
     return state
 
@@ -194,7 +194,7 @@ def alignment(song_pred, lyrics, idx):
     lyrics_int = phone2seq(lyrics)
     lyrics_length = len(lyrics_int)
 
-    s = np.zeros((audio_length, 2*lyrics_length+1)) - np.Inf
+    s = np.zeros((audio_length, 2*lyrics_length+1)) - np.inf
     opt = np.zeros((audio_length, 2*lyrics_length+1))
 
     blank = 40
@@ -303,7 +303,7 @@ def alignment_bdr(song_pred, lyrics, idx, bdr_pred, line_start):
     lyrics_int = phone2seq(lyrics)
     lyrics_length = len(lyrics_int)
 
-    s = np.zeros((audio_length, 2*lyrics_length+1)) - np.Inf
+    s = np.zeros((audio_length, 2*lyrics_length+1)) - np.inf
     opt = np.zeros((audio_length, 2*lyrics_length+1))
 
     blank = 40
