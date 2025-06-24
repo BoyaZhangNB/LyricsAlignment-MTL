@@ -12,3 +12,4 @@ tensorboard
 sortedcontainers
 youtube_dl
 g2p_en
+resampy

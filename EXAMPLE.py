@@ -1,7 +1,7 @@
 from wrapper import align, preprocess_from_file, write_csv
 
-audio_file = "data/vocals.wav"   # pre-computed source-separated vocals; These models do not work with mixture input.
-lyrics_file = "data/lyrics.txt"   # example: jamendolyrics/lyrics/*.raw.txt"
+audio_file = "EXAMPLE/data/vocals.wav"   # pre-computed source-separated vocals; These models do not work with mixture input.
+lyrics_file = "EXAMPLE/data/lyrics.txt"   # example: jamendolyrics/lyrics/*.raw.txt"
 word_file = None   # example: jamendolyrics/lyrics/*.words.txt"; Set to None if you don't have it
 method = "MTL"                             # "Baseline", "MTL", "Baseline_BDR", "MTL_BDR"
 cuda=False                                 # set True if you have access to a GPU

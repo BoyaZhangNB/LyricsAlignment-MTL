@@ -42,5 +42,8 @@ def csv_differences(csv_path: str) -> List[float]:
     return deltas
 
 if __name__ == "__main__":
-    result = csv_differences("MTL.csv")
+    result = csv_differences("EXAMPLE/MTL.csv")
     print(result)
+    with open("result.txt", "w") as f:
+        result = str(result)
+        f.write(result)
